@@ -1,0 +1,9 @@
+﻿@model Voorhent.ViewModels.SendMessageViewModel
+
+<form method="post" action="/Hotels/ProcessMessage">
+    <div>
+        <label for="message">Message:</label>
+        <textarea id="message" name="Message" rows="4" cols="40"></textarea>
+    </div>
+    <button type="submit">Send</button>
+</form>

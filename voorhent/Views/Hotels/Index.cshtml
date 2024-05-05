@@ -1,0 +1,26 @@
+﻿@model List<voorhent.Models.Hotel>
+@using Microsoft.AspNetCore.Mvc.Localization
+
+@inject IViewLocalizer Localizer
+
+<h2>@Localizer["HotelListTitle"]</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Localizer["NameColumn"]</th>
+            <th>@Localizer["AddressColumn"]</th>
+            <th>@Localizer["PhoneNumberColumn"]</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var hotel in Model)
+        {
+            <tr>
+                <td>@hotel.Name</td>
+                <td>@hotel.Address</td>
+                <td>@hotel.PhoneNumber</td>
+            </tr>
+        }
+    </tbody>
+</table>
